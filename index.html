@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automatic Bell System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="bell-icon">🔔</div>
+        <h1>Automatic Bell System</h1>
+        <p>ESP32 • 8 Subjects • 5 Bells</p>
+    </header>
+
+
+    <!-- CONNECTION -->
+    <section class="card">
+
+        <h2>System Status</h2>
+
+        <div id="connection"
+             class="status offline">
+            ESP32 DISCONNECTED
+        </div>
+
+        <div id="systemStatus"
+             class="system-status">
+            SYSTEM READY
+        </div>
+
+    </section>
+
+
+    <!-- CURRENT SUBJECT -->
+    <section class="card">
+
+        <h2>Current Subject</h2>
+
+        <div id="currentSubject"
+             class="current-subject">
+            Subject 1
+        </div>
+
+        <div id="remaining"
+             class="timer">
+            01:00:00
+        </div>
+
+        <p class="center">
+            Time Remaining
+        </p>
+
+    </section>
+
+
+    <!-- BELL CONTROL -->
+    <section class="card">
+
+        <h2>Bell Control</h2>
+
+        <button class="btn blue"
+                onclick="bell()">
+            🔔 RING ALL 5 BELLS
+        </button>
+
+        <button class="btn gray"
+                onclick="stopBell()">
+            ⛔ STOP
+        </button>
+
+    </section>
+
+
+    <!-- INDIVIDUAL BELLS -->
+    <section class="card">
+
+        <h2>Individual Bells</h2>
+
+        <div class="bell-grid">
+
+            <button class="btn green"
+                    onclick="bellNumber(1)">
+                🔔 Bell 1
+            </button>
+
+            <button class="btn green"
+                    onclick="bellNumber(2)">
+                🔔 Bell 2
+            </button>
+
+            <button class="btn green"
+                    onclick="bellNumber(3)">
+                🔔 Bell 3
+            </button>
+
+            <button class="btn green"
+                    onclick="bellNumber(4)">
+                🔔 Bell 4
+            </button>
+
+            <button class="btn green"
+                    onclick="bellNumber(5)">
+                🔔 Bell 5
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- EMERGENCY -->
+    <section class="card emergency">
+
+        <h2>Emergency Alarm</h2>
+
+        <button class="btn orange"
+                onclick="earthquake()">
+            🌎 EARTHQUAKE ALARM
+        </button>
+
+        <button class="btn red"
+                onclick="fireAlarm()">
+            🔥 FIRE ALARM
+        </button>
+
+        <button class="btn gray"
+                onclick="stopAlarm()">
+            ⛔ STOP ALARM
+        </button>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+    <section class="card">
+
+        <h2>8 Subjects</h2>
+
+        <div id="subjects">
+
+            <div class="subject">1. Subject 1</div>
+            <div class="subject">2. Subject 2</div>
+            <div class="subject">3. Subject 3</div>
+            <div class="subject">4. Subject 4</div>
+            <div class="subject">5. Subject 5</div>
+            <div class="subject">6. Subject 6</div>
+            <div class="subject">7. Subject 7</div>
+            <div class="subject">8. Subject 8</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+    <section class="card">
+
+        <h2>Automatic Schedule</h2>
+
+        <p>
+            Each subject lasts
+            <strong>1 hour</strong>.
+        </p>
+
+        <p>
+            At the end of every hour,
+            all five bells will ring.
+        </p>
+
+    </section>
+
+
+    <footer>
+        Automatic Bell System
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
